@@ -1,0 +1,1 @@
+export {SeminarPage} from "./ui.tsx";
