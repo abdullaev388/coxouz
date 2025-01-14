@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        dentistRoom: "url(@/assets/img/dentist_room.png/)"
+        dentistRoom: "url(@/assets/img/dentist_room.png)"
       }
     }
   },
