@@ -14,7 +14,7 @@ export const CatalogPage = () => {
         : "Каталог"
 
     const products = categoryName && categoryName in categories
-        ? categories[categoryName]
+        ? categories[categoryName as keyof typeof categories]
         : !categoryName ? Object.values(categories).flat() : [];
 
     return (

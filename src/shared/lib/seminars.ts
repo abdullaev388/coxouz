@@ -1,11 +1,7 @@
 import seminar_1 from "@/assets/img/seminars/seminar_1.jpg";
-import seminar_2 from "@/assets/img/seminars/seminar_2.jpg";
 import seminar_3 from "@/assets/img/seminars/seminar_3.jpg";
-import seminar_4 from "@/assets/img/seminars/seminar_4.jpg";
-import seminar_5 from "@/assets/img/seminars/seminar_5.jpg";
-import seminar_6 from "@/assets/img/seminars/seminar_6.jpg";
-import seminar_7 from "@/assets/img/seminars/seminar_7.jpg";
-
+import seminar_8 from "@/assets/img/seminars/photo_2025-01-08_21-44-11 (2).jpg";
+import seminar_9 from "@/assets/img/seminars/photo_2025-01-08_21-47-31.jpg";
 import {idGenerator} from "@/shared/lib/id-generator.ts";
 
 export type SeminarType = {
@@ -26,64 +22,106 @@ export type SeminarProgramPart = {
 
 const genirateId = idGenerator();
 
-const makeSeminar = (imageSrc: SeminarType['imageSrc']) => {
-    return {
+export const seminars: Array<SeminarType> = [
+    {
         id: genirateId(),
-        imageSrc,
-        title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
-        subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure minima molestiae tempora vel. A facere impedit ipsa, quis sapiente vitae. Aut eveniet necessitatibus saepe vitae voluptates? Aliquid amet assumenda blanditiis cum dignissimos distinctio dolore dolores eos esse ex harum, illum ipsa natus pariatur perferendis provident quae quas rem rerum sapiente sed similique tempore temporibus unde veniam voluptas voluptatum? Ab accusamus, adipisci aliquid assumenda autem blanditiis debitis deserunt dolores error, expedita fugit illo incidunt laboriosam laborum nihil nulla quaerat quam quisquam saepe sed suscipit veritatis vitae voluptates. A debitis doloremque eius itaque officia officiis? Aperiam cumque deserunt dignissimos distinctio est fugit hic id magnam perspiciatis praesentium? Explicabo, molestiae voluptatibus? Beatae debitis distinctio dolorem doloremque minus non quis ratione sapiente temporibus voluptate? Ad architecto culpa distinctio dolorum explicabo nostrum perspiciatis quis recusandae sapiente! A autem corporis cupiditate dolorum eveniet expedita facere in laborum modi molestias nihil obcaecati quidem rerum, sunt suscipit voluptate voluptatem? Adipisci debitis eveniet necessitatibus quam reprehenderit rerum similique. At autem corporis cupiditate debitis deserunt error est et excepturi explicabo facere fuga inventore itaque magnam natus nemo non odit officia provident, quae quia quibusdam recusandae reiciendis, rerum sed tempora ut voluptatibus. Ab eaque modi odit tenetur vel. Ad animi atque beatae dolor dolores dolorum ea earum eos est id illo incidunt inventore laboriosam, laudantium maxime minus odit repellat, repudiandae rerum sequi tempore temporibus veniam veritatis voluptas voluptatum. Adipisci debitis earum error facere fuga fugit hic quibusdam quidem. Autem distinctio, eum explicabo impedit nam qui quidem suscipit unde veritatis voluptatum!",
-        dates: ["26 августа 09:00-18:00", "27 августа 09:00-18:00"],
+        imageSrc: seminar_1,
+        title: "Реставрации жевательных зубов",
+        subtitle: "",
+        dates: ["8 Сентября 09:00-18:00"],
         program: [
             {
-                title: "Регистрация",
-                subtitle: "Регистрация участников",
-                from: "09:00",
-                to: "09:30"
-            },
-            {
-                title: "Лекционная часть",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure minima molestiae tempora vel. A facere impedit ipsa, quis sapiente vitae. Aut eveniet necessitatibus saepe vitae voluptates? Aliquid amet assumenda blanditiis cum dignissimos distinctio dolore dolores eos esse ex harum, illum ipsa natus pariatur perferendis provident quae quas rem rerum sapiente sed similique tempore temporibus unde veniam voluptas voluptatum? Ab accusamus, adipisci aliquid assumenda autem blanditiis debitis deserunt dolores error, expedita fugit illo incidunt laboriosam laborum nihil nulla quaerat quam quisquam saepe sed suscipit veritatis vitae voluptates. A debitis doloremque eius itaque officia officiis? Aperiam cumque deserunt dignissimos distinctio est fugit hic id magnam perspiciatis praesentium? Explicabo, molestiae voluptatibus? Beatae debitis distinctio dolorem doloremque minus non quis ratione sapiente temporibus voluptate? Ad architecto culpa distinctio dolorum explicabo nostrum perspiciatis quis recusandae sapiente! A autem corporis cupiditate dolorum eveniet expedita facere in laborum modi molestias nihil obcaecati quidem rerum, sunt suscipit voluptate voluptatem? Adipisci debitis eveniet necessitatibus quam reprehenderit rerum similique. At autem corporis cupiditate debitis deserunt error est et excepturi explicabo facere fuga inventore itaque magnam natus nemo non odit officia provident, quae quia quibusdam recusandae reiciendis, rerum sed tempora ut voluptatibus. Ab eaque modi odit tenetur vel. Ad animi atque beatae dolor dolores dolorum ea earum eos est id illo incidunt inventore laboriosam, laudantium maxime minus odit repellat, repudiandae rerum sequi tempore temporibus veniam veritatis voluptas voluptatum. Adipisci debitis earum error facere fuga fugit hic quibusdam quidem. Autem distinctio, eum explicabo impedit nam qui quidem suscipit unde veritatis voluptatum!",
-                from: "09:30",
-                to: "11:30"
-            },
-            {
-                title: "Кофе брейк",
-                from: "11:30",
-                to: "12:00"
-            },
-            {
-                title: "Протоколы полировки",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ducimus, et in iste maiores molestias mollitia nesciunt nisi optio vel? Delectus eaque ipsum magnam nobis officia perferendis provident quae recusandae!",
-                from: "12:00",
-                to: "14:00"
-            },
-            {
-                title: "Обед",
-                from: "14:00",
-                to: "15:00"
-            },
-            {
                 title: "Практическая часть",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure minima molestiae tempora vel. A facere impedit ipsa, quis sapiente vitae. Aut eveniet necessitatibus saepe vitae voluptates? Aliquid amet assumenda blanditiis cum dignissimos distinctio dolore dolores eos esse ex harum, illum ipsa natus pariatur perferendis provident quae quas rem rerum sapiente sed similique tempore temporibus unde veniam voluptas voluptatum? Ab accusamus, adipisci aliquid assumenda autem blanditiis debitis deserunt dolores error, expedita ful!",
-                from: "15:00",
-                to: "18:00"
-            },
-            {
-                title: "2 день ",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ducimus, et in iste maiores molestias mollitia nesciunt nisi optio vel? Delectus eaque ipsum magnam nobis officia perferendis provident quae recusandae!",
+                subtitle: "Техника повторения анатомии жевательного зуба, используя разные виды шаблонов: с прозрачным силиконом первый моляр, с жидким кофердамом или текучим композитом второй моляр\n" +
+                    "Техника окрашивания фиссур\n" +
+                    "Реставрация верхнего и нижнего первого моляра: техники по бугоркам и по гребням.\n" +
+                    "Реставрация жевательного зуба 2 класс, восстановление контактного пункта (хэндмейд, индивидуализация кольца, разновидности матричных систем, клинья, матрицы, тефлон, кольца)\n" +
+                    "Реставрация «коварного» 5 класса. Чтобы пломба держалась годами, без серости и «белой линии»",
                 from: "09:00",
                 to: "18:00"
             },
         ]
-    }
-}
-
-export const seminars: Array<SeminarType> = [
-    makeSeminar(seminar_1),
-    makeSeminar(seminar_2),
-    makeSeminar(seminar_3),
-    makeSeminar(seminar_4),
-    makeSeminar(seminar_5),
-    makeSeminar(seminar_6),
-    makeSeminar(seminar_7)
+    },
+    {
+        id: genirateId(),
+        imageSrc: seminar_3,
+        title: "Эффективная эстетика",
+        subtitle: "",
+        dates: ["10 Ноября 09:00-18:00"],
+        program: [
+            {
+                title: "Практическая часть",
+                subtitle: "Современные аспекты изоляции рабочего поля. Optra Gate\n" +
+                    "Характеристики современных пломбировочных материалов, класс Bulk fill. Особенности использования материалов.\n" +
+                    "Адаптивный слой. Обсуждение вопроса показаний применения текучих композитов.\n" +
+                    "Основные принципы выбора адгезивной системы в соответствии с клинической ситуацией. Протоколы использования. Особенности применения самопротравливающей системы.\n" +
+                    "Техника полимеризации и современные аспекты.\n" +
+                    "Требования к восстановлению анатомической формы зубов. Методики формообразования зуба.\n" +
+                    "Алгоритм восстановления по силиконовому ключу. Формирование контактного пункта, приемы, методы.\n" +
+                    "Полировочные системы, виды, использование. Ошибки и осложнения при работе с композитами.",
+                from: "09:00",
+                to: "18:00"
+            },
+        ]
+    },
+    {
+        id: genirateId(),
+        imageSrc: seminar_8,
+        title: "Фронтальные реставрацы от А до Я",
+        subtitle: "",
+        dates: ["20 Декабрь 09:00-18:00"],
+        program: [
+            {
+                title: "Практическая часть",
+                subtitle: "Морфология фронтальное группы зубов. Основные анатомические образования вестибулярной поверхности.\n" +
+                    "\n" +
+                    "2. Микрорельеф вестибулярной поверхности. Детализация реставрации, путём создания рельефа.\n" +
+                    "\n" +
+                    "3. Оптика вестибулярной поверхности. Принцип оптического построения, в зависимости от различного типа мамелон.\n" +
+                    "\n" +
+                    "4. Послойный принцип построения. Наружный, внутренний и промежуточный слои во фронтальной реставрации.\n" +
+                    "\n" +
+                    "5. Принцип выбора композитного материала, в зависимости от типа и локализации дефекта.\n" +
+                    "\n" +
+                    "6.Дефекты по IV классу. Принцип подбора оттенка и лайфхаки создании незаметного перехода на этапе моделирования и создания рельефа.\n" +
+                    "\n" +
+                    "7. Класс III. Особенности препарирования и послойного построения, в зависимости от дизайна полости.\n" +
+                    "\n" +
+                    "8. Промежуточный слой реставрации. Основные хроматические эффекты и способы из создания, путём внесения красителей и прозрачных композитов.\n" +
+                    "\n" +
+                    "9. Коррекция реставрации. Норма или нет? Чёткий протокол реадгезивной подготовки композита , в зависимости от срока. Коррекция гибридного слоя при контаминации.\n" +
+                    "\n" +
+                    "10. BOX техника. Разбор методики на каждом этапе. Протокол восстановления сильно разрушенных зубов.\n" +
+                    "\n" +
+                    "11. Полное перекрытие вестибулярной поверхности. Протокол работы при коррекции формы и цвета зубов. Работа с индивидуальной матрицей.\n" +
+                    "\n" +
+                    "12. Создание рельефа и конкурирование вестибулярной поверхности. Способы вырезания рельефа и основной принцип нанесения рельефа\n" +
+                    "\n" +
+                    "13. Полировка композитного материала. Пошаговый протокол и демонстрация этапов полировки",
+                from: "09:00",
+                to: "18:00"
+            },
+        ]
+    },
+    {
+        id: genirateId(),
+        imageSrc: seminar_9,
+        title: "Участие в конференции стоматологов в Ташкенте",
+        subtitle: "",
+        dates: ["7-8 Мая 09:00-18:00"],
+        program: [
+            {
+                title: "Описание",
+                subtitle: "Недавно мы приняли участие в небольшой стоматологической конференции, которая прошла в Ташкенте. Это была уютная и продуктивная встреча, собравшая местных специалистов для обсуждения актуальных вопросов современной стоматологии.\n" +
+                    "\n" +
+                    "В рамках конференции мы провели презентацию наших эндодонтических материалов, стоматологической техники и полировочных систем. Мы подробно рассказали о возможностях наших продуктов: современных инструментах для обработки корневых каналов, надежных материалах для пломбирования и эффективных системах для полировки реставраций. Особое внимание уделили инновационным решениям, которые облегчают работу специалистов и улучшают качество лечения.\n" +
+                    "\n" +
+                    "Кроме того, мы организовали практическую сессию, где участники могли протестировать нашу стоматологическую технику и оценить результаты использования полировочных материалов. Особенно высоко были оценены наши полировочные системы, которые обеспечивают быстрый и качественный результат, создавая идеальный блеск и гладкость.\n" +
+                    "\n" +
+                    "Конференция стала прекрасной возможностью продемонстрировать наши достижения, наладить диалог с местными специалистами и получить обратную связь. Мы рады, что наши материалы и техника вызвали интерес и получили положительные отзывы.",
+                from: "09:00",
+                to: "18:00"
+            },
+        ]
+    },
 ]

@@ -18,7 +18,7 @@ export const $cartTotalItems = $cart.map(cart => cart.reduce((total, item) => to
 
 export const $cartTotalSum = $cart.map(cart =>
     cart.reduce((total, cartItem) => {
-        const item = categories[cartItem.category].find(item => item.id === cartItem.productId);
+        const item = categories[cartItem.category as keyof typeof categories].find(item => item.id === cartItem.productId);
         if (!item) {
             return total;
         }
@@ -28,7 +28,7 @@ export const $cartTotalSum = $cart.map(cart =>
 
 export const $cartProducts = $cart.map(cart =>
     cart.map(item => {
-        const product = categories[item.category].find(product => product.id === item.productId);
+        const product = categories[item.category as keyof typeof categories].find(product => product.id === item.productId);
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         return {...product!, amount: item.amount}
     })

@@ -3,6 +3,8 @@ import googlePlay from "@/assets/img/google_play.png";
 
 import {Container} from "@/shared/ui";
 import {FacebookLogo, InstagramLogo, TwitterLogo, TelegramLogo, WhatsappLogo, VkLogo} from "@/shared/ui/icons.tsx";
+import {routes} from "@/shared/routes";
+import {Link} from "atomic-router-react";
 
 export const Footer = () => {
     return (
@@ -68,11 +70,15 @@ export const Links = () => {
 
                 <div className={linkClass}>Вопросы и ответы</div>
                 <div className={linkClass}>Каталог</div>
-                <div className={linkClass}>Семинары</div>
+                <div className={linkClass}>
+                    <Link to={routes.seminars}>Семинары</Link>
+                </div>
 
                 <div className={linkClass}>Доставка и оплата</div>
                 <div className={linkClass}>Privacy Policy</div>
-                <div className={linkClass}>Контакты</div>
+                <div className={linkClass}>
+                    <Link to={routes.contacts}>Контакты</Link>
+                </div>
             </div>
 
             <div className='flex flex-col items-center gap-y-4'>

@@ -18,8 +18,7 @@ export const Product = ({product, actions}: {product: ProductType, actions: Reac
                     className='mt-[5px] font-semibold hover:text-sky-500 h-[50px] overflow-hidden text-ellipsis line-clamp-2'>
                     {product.title}
                 </Link>
-                <div className='mt-[10px] text-xl font-bold flex justify-between'>
-                    <div>{product.price} сум</div>
+                <div className='mt-[10px] text-xl font-bold flex justify-end'>
                     {actions}
                 </div>
             </div>

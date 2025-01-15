@@ -24,7 +24,7 @@ export const Header = () => {
             <Container>
                 <div className='h-full flex items-center'>
                     <Link to={routes.home}>
-                        <img src={logo} alt="coxo uz" className='w-96'/>
+                        <img src={logo} alt="coxo uz" className='w-96 mb-2'/>
                     </Link>
 
                     <SearchProducts/>
@@ -74,7 +74,7 @@ const CartHoverCard = () => {
 }
 
 const CartData = React.forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
-    const [totalSum, totalItems] = useUnit([cartModel.$cartTotalSum, cartModel.$cartTotalItems]);
+    const [_, totalItems] = useUnit([cartModel.$cartTotalSum, cartModel.$cartTotalItems]);
 
     return (
         <div
@@ -88,12 +88,6 @@ const CartData = React.forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
                     absolute top-3 left-5
                 '>
                     {totalItems}
-                </div>
-            }
-            {Boolean(totalItems) &&
-                <div className='text-white text-sm'>
-                    Сумма
-                    <div>{totalSum} сум</div>
                 </div>
             }
         </div>
@@ -122,7 +116,6 @@ const CartItem = ({product}: { product: StoreValue<typeof cartModel.$cartProduct
                     className='mt-[3px] text-sm font-medium bg-primary text-transparent bg-clip-text'>{product.title}</div>
             </div>
             <div className='ml-[20px]'>
-                <div className='font-extrabold text-lg'>{product.amount * product.price}</div>
                 <div className='text-xs text-gray-500'>{product.amount} шт</div>
             </div>
             <CloseIcon height={25} width={25}

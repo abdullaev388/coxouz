@@ -1,18 +1,18 @@
-import React from "react";
+import React, {CSSProperties} from "react";
 import {Link} from "atomic-router-react";
 
-import ultrasonicSurgerySystem from "@/assets/img/categories/ultrasonic_surgery_system.png";
-import hotProduct from "@/assets/img/categories/hot_product.png";
+import retina from "@/assets/img/categories/logo-retina.png"
+import polishing from "@/assets/img/categories/eve-rotary-logo.png";
+import newsP from "@/assets/img/categories/2.png"
 import handpiece from "@/assets/img/categories/handpiece.png";
 import operatingMicroscope from "@/assets/img/categories/operating_microscope.png";
 import endoMotor from "@/assets/img/categories/endo_motor.png";
-import endoFile from "@/assets/img/categories/endo_file.png";
-import endodonticObturationSystem from "@/assets/img/categories/endodontic_obturation_system.png";
 import apexLocator from "@/assets/img/categories/apex_locator.png";
 import dentalImplantaionSystem from "@/assets/img/categories/dental_implantaion_system.png";
-import dentalElectricalMotor from "@/assets/img/categories/dental_electrical_motor.png";
 import ledCuringLight from "@/assets/img/categories/led_curing_light.png";
 import dentalOperatingLight from "@/assets/img/categories/dental_operating_light.png";
+import soco from "@/assets/img/categories/SOCO-Logo.png"
+import untitled from "@/assets/img/categories/Untitled-1.png";
 
 import {routes} from "@/shared/routes";
 import {categoriesTitle, CategoryName, endoMotors} from "@/shared/lib/categories.ts";
@@ -34,7 +34,7 @@ export const Home = () => {
     return (
         <>
             <Categories/>
-            <NewProducts />
+            <NewProducts/>
             <CompanyInfo/>
             <BonusSystem/>
         </>
@@ -47,20 +47,20 @@ const Categories = () => {
             <Container>
                 <div
                     className='grid grid-cols-3 bg-dentistRoom bg-center bg-cover border-[5px] border-solid border-white'>
-                    <Category name={CategoryName.ultrasonicSurgerySystems} image={ultrasonicSurgerySystem}/>
-                    <Category name={CategoryName.hotProducts} image={hotProduct}/>
-                    <Category name={CategoryName.handpieces} image={handpiece}/>
+                    <Category name={CategoryName.polishing} image={polishing} style={{ height: 80, objectFit: "contain" }}/>
+                    <Category name={CategoryName.hotProducts} image={newsP} style={{ height: 90, width: 190, objectFit: "contain" }} />
+                    <Category name={CategoryName.handpieces} image={handpiece} />
 
-                    <Category name={CategoryName.endodonticObturationSystems} image={endodonticObturationSystem}/>
+                    <Category name={CategoryName.endodonticObturationSystems} image={untitled} style={{ height: 90, width: 150, objectFit: "contain" }} />
                     <Category name={CategoryName.operatingMicroscopes} image={operatingMicroscope}/>
                     <Category name={CategoryName.endoMotors} image={endoMotor}/>
 
 
                     <Category name={CategoryName.dentalOperatingLights} image={dentalOperatingLight}/>
                     <Category name={CategoryName.apexLocators} image={apexLocator}/>
-                    <Category name={CategoryName.endoFiles} image={endoFile}/>
+                    <Category name={CategoryName.endoFiles} image={soco}/>
 
-                    <Category name={CategoryName.dentalElectricalMotors} image={dentalElectricalMotor}/>
+                    <Category name={CategoryName.vizograf} image={retina} style={{ height: 90, width: 190, objectFit: "contain" }} />
                     <Category name={CategoryName.dentalImplantationSystems} image={dentalImplantaionSystem}/>
                     <Category name={CategoryName.ledCuringLight} image={ledCuringLight}/>
                 </div>
@@ -75,7 +75,7 @@ const NewProducts = () => {
             <Container>
                 <div className='font-extrabold text-4xl'>Новинки</div>
                 <div className='p-[7px] mt-[20px] bg-[#f6f8f9] h-fit w-fit'>
-                    <ProductsList products={endoMotors} />
+                    <ProductsList products={endoMotors}/>
                 </div>
             </Container>
         </div>
@@ -159,7 +159,7 @@ const Info = ({title, subtitle, icon}: { title: string, subtitle: string, icon: 
     )
 }
 
-const Category = ({name, image}: { name: CategoryName, image: string }) => {
+const Category = ({name, image, style}: { name: CategoryName, image: string, style?: CSSProperties }) => {
     const title = categoriesTitle[name];
 
     return (
@@ -169,7 +169,7 @@ const Category = ({name, image}: { name: CategoryName, image: string }) => {
                 before:absolute before:bg-primary before:inset-0 before:opacity-80
             '>
                 <div className='relative text-white font-bold text-lg'>{title}</div>
-                <img src={image} alt={title} className='relative h-[100px]'/>
+                <img src={image} alt={title} className='relative h-[100px]' style={style}/>
             </div>
         </Link>
     )

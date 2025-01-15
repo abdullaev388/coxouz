@@ -9,7 +9,7 @@ import {CustomAddToCart} from "@/features/cart/add";
 export const ProductPage = () => {
     const {category, productId} = useUnit(routes.product.$params)
 
-    const products = categories[category];
+    const products = categories[category as keyof typeof categories];
     const product = products?.find(product => product.id.toString() === productId);
     if (!products || !product) {
         return (
@@ -23,17 +23,11 @@ export const ProductPage = () => {
         <div className='bg-[#eeeeee]'>
             <Container>
                 <div className='py-[80px] flex gap-x-[43px]'>
-                    <img src={product.imageUrl} alt={product.title} className='min-w-[276px] h-[276px] object-cover'/>
+                    <img src={product.imageUrl} alt={product.title} className='min-w-[276px] h-[276px] object-contain'/>
                     <div>
                         <div className='flex gap-x-[40px] items-center'>
                             <div className='font-bold text-3xl w-[500px]'>{product.title}</div>
                             <CustomAddToCart product={product}>В КОРЗИНУ</CustomAddToCart>
-                        </div>
-
-
-                        <div className='mt-[20px]'>
-                            <div className='text-gray-500'>Стоимость</div>
-                            <div className='font-bold text-3xl'>{product.price} Сум</div>
                         </div>
                     </div>
                 </div>
