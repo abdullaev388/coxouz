@@ -226,197 +226,196 @@ export const endodonticObturationSystems: Array<ProductType> = [
 ];
 
 export const polishingProducts: Array<ProductType> = [
-    {
-        id: getId(),
-        title: "Meet endo",
-        price: 1000,
-        category: CategoryName.polishing,
-        imageUrl: eve1
-    },
-    {
-        id: getId(),
-        title: "Ai Mate",
-        price: 1000,
-        category: CategoryName.polishing,
-        imageUrl: eve2
-    },
-    {
-        id: getId(),
-        title: "Meta Endo",
-        price: 1000,
-        category: CategoryName.polishing,
-        imageUrl: eve3
-    },
-    {
-        id: getId(),
-        title: "iCure",
-        price: 1000,
-        category: CategoryName.polishing,
-        imageUrl: eve4
-    },
-]
-
-export const hotProducts: Array<ProductType> = [
-    {
-        id: getId(),
+    {    id: getId(),
         title: "DCP-OFM",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: a
     },
     {
         id: getId(),
         title: "DCP-OFM",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: b
     },
     {
         id: getId(),
         title: "DT-DCP",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: c
     },
     {
         id: getId(),
         title: "DT-DCP",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: d
     },
     {
         id: getId(),
         title: "EY-1F",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: e
     },
     {
         id: getId(),
         title: "EY-1M-45",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: f
     },
     {
         id: getId(),
         title: "EY-1M",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: g
     },
     {
         id: getId(),
         title: "EY-3M",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: h
     },
     {
         id: getId(),
         title: "EY-10M",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: i
     },
     {
         id: getId(),
         title: "EY-10M",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: j
     },
     {
         id: getId(),
         title: "EY-OF",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: k
     },
     {
         id: getId(),
         title: "EY-OF",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: l
     },
     {
         id: getId(),
         title: "PC-103",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: m
     },
     {
         id: getId(),
         title: "SET RA 101",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: n
     },
     {
         id: getId(),
         title: "SET RA 342",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: o
     },
     {
         id: getId(),
         title: "SET RA 345",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: p
     },
     {
         id: getId(),
         title: "SET RA CSL",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: q
     },
     {
         id: getId(),
         title: "SET RA EY",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: r
     },
     {
         id: getId(),
         title: "W1 1",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: s
     },
     {
         id: getId(),
         title: "W2B 1",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: t
     },
     {
         id: getId(),
         title: "W5-1",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: u
     },
     {
         id: getId(),
         title: "W7-1-96",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: v
     },
     {
         id: getId(),
         title: "W9-134",
         price: 1000,
-        category: CategoryName.hotProducts,
+        category: CategoryName.polishing,
         imageUrl: w
+    },
+]
+
+export const hotProducts: Array<ProductType> = [
+    {
+        id: getId(),
+        title: "Meet endo",
+        price: 1000,
+        category: CategoryName.hotProducts,
+        imageUrl: eve1
+    },
+    {
+        id: getId(),
+        title: "Ai Mate",
+        price: 1000,
+        category: CategoryName.hotProducts,
+        imageUrl: eve2
+    },
+    {
+        id: getId(),
+        title: "Meta Endo",
+        price: 1000,
+        category: CategoryName.hotProducts,
+        imageUrl: eve3
+    },
+    {
+        id: getId(),
+        title: "iCure",
+        price: 1000,
+        category: CategoryName.hotProducts,
+        imageUrl: eve4
     },
 ];
 
