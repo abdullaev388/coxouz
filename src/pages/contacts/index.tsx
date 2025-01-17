@@ -17,8 +17,8 @@ export const ContactsPage = () => {
                             </a>
 
                             <div>Почта</div>
-                            <a href='mailto:tausstone@gmail.uz' className='text-lg w-fit v font-medium text-sky-500 hover:text-sky-600'>
-                                tausstone@gmail.uz
+                            <a href='mailto:tuasstoneuz@gmail.com' className='text-lg w-fit v font-medium text-sky-500 hover:text-sky-600'>
+                                tuasstoneuz@gmail.com
                             </a>
 
                             <div>Время работы</div>
